@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adil Edutrack Skill Society - Computer courses, professional training, vocational skills and career development.">
+  <title>Adil Edutrack Skill Society</title>
+  <style>
+    :root {
+      --navy: #101d35;
+      --gold: #e5ad43;
+      --white: #ffffff;
+      --light: #f5f6f8;
+      --text: #263247;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 16px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo { font-size: 21px; font-weight: 800; color: var(--gold); }
+    .navlinks { display: flex; gap: 22px; align-items: center; }
+    .navlinks a {
+      color: white; text-decoration: none; font-size: 14px;
+    }
+    .menu-btn {
+      display: none; background: none; color: white;
+      border: 0; font-size: 25px; cursor: pointer;
+    }
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 85px 7%;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(30px, 5vw, 48px); margin-bottom: 15px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { max-width: 700px; margin: 0 auto 25px; color: #e1e5ed; }
+    .btn {
+      display: inline-block; background: var(--gold); color: var(--navy);
+      padding: 12px 23px; border-radius: 5px; text-decoration: none;
+      font-weight: bold; border: 0; cursor: pointer;
+    }
+    section { padding: 65px 7%; }
+    .section-title { text-align: center; margin-bottom: 35px; }
+    .section-title h2 { color: var(--navy); font-size: 30px; }
+    .section-title p { color: #687386; }
+    .about { background: var(--light); text-align: center; }
+    .about p { max-width: 850px; margin: auto; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .course {
+      background: white; border: 1px solid #e6e8ec;
+      border-radius: 9px; padding: 25px;
+      box-shadow: 0 5px 18px rgba(16,29,53,.06);
+    }
+    .course h3 { color: var(--navy); margin-bottom: 10px; }
+    .course p { color: #687386; font-size: 14px; }
+    .course a { display: inline-block; margin-top: 15px; color: #9a6915; font-weight: bold; text-decoration: none; }
+    .steps { background: var(--light); }
+    .contact { background: var(--navy); color: white; }
+    .contact .section-title h2 { color: white; }
+    .contact .section-title p { color: #d8deea; }
+    form { max-width: 600px; margin: auto; display: grid; gap: 13px; }
+    input, select, textarea {
+      width: 100%; padding: 13px; border-radius: 5px;
+      border: 1px solid #d5d9e0; font: inherit;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    footer {
+      background: #0b1528; color: white; text-align: center;
+      padding: 22px 7%; font-size: 13px;
+    }
+    @media(max-width:700px) {
+      .menu-btn { display: block; }
+      .navlinks {
+        display: none; width: 100%; flex-direction: column;
+        align-items: flex-start; padding-top: 15px;
+      }
+      .navlinks.open { display: flex; }
+      .hero { padding: 65px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ADIL EDUTRACK</div>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  <nav class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1>Learn Skills. <span>Build Your Future.</span></h1>
+    <p>
+      Explore professional training, computer education and vocational
+      skill development programmes designed to support your career journey.
+    </p>
+    <a class="btn" href="#courses">Explore Courses</a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>About Us</h2>
+      <p>Learning today for better opportunities tomorrow.</p>
+    </div>
+    <p>
+      Adil Edutrack Skill Society focuses on skill-based learning,
+      practical knowledge and career development. Our aim is to help
+      learners build useful skills and explore new opportunities.
+    </p>
+  </section>
+
+  <section id="courses">
+    <div class="section-title">
+      <h2>Our Courses & Training</h2>
+      <p>Choose a learning path that matches your goals.</p>
+    </div>
+    <div class="grid">
+      <div class="course">
+        <h3>Computer Courses</h3>
+        <p>Basic computer, MS Office, Advanced Excel, internet and digital skills.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+      <div class="course">
+        <h3>Government Exam Preparation</h3>
+        <p>Learning support and preparation guidance for competitive examinations.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+      <div class="course">
+        <h3>Teacher Training</h3>
+        <p>Educational training and teaching skill development programmes.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+      <div class="course">
+        <h3>Professional Courses</h3>
+        <p>Digital marketing, data skills and professional development training.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+      <div class="course">
+        <h3>Vocational Training</h3>
+        <p>Practical and job-oriented skill development opportunities.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+      <div class="course">
+        <h3>Internship Programmes</h3>
+        <p>Practical learning projects and internship opportunities.</p>
+        <a href="#contact">Enquire Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p>A simple path to start learning.</p>
+    </div>
+    <div class="grid">
+      <div class="course">
+        <h3>01. Explore</h3>
+        <p>Browse available courses and training programmes.</p>
+      </div>
+      <div class="course">
+        <h3>02. Enquire</h3>
+        <p>Share your details and ask about the programme.</p>
+      </div>
+      <div class="course">
+        <h3>03. Get Guidance</h3>
+        <p>Discuss course details, eligibility and next steps.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-title">
+      <h2>Start Your Learning Journey</h2>
+      <p>Send an enquiry through WhatsApp.</p>
+    </div>
+    <form onsubmit="sendForm(event)">
+      <input type="text" name="Name" placeholder="Your Full Name" required>
+      <input type="tel" name="Phone" placeholder="Your Mobile Number" required>
+      <select name="Course" required>
+        <option value="">Select a Course</option>
+        <option>Computer Courses</option>
+        <option>Government Exam Preparation</option>
+        <option>Teacher Training</option>
+        <option>Professional Courses</option>
+        <option>Vocational Training</option>
+        <option>Internship Programmes</option>
+      </select>
+      <textarea name="Message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Submit Enquiry on WhatsApp</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© <span data-year></span> Adil Edutrack Skill Society. All Rights Reserved.</p>
+  <p>Learning • Skills • Opportunities</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
